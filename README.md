@@ -6,8 +6,11 @@
 Most internet applications use data transmission protocol known as TCP, later using algorithms for the congestion control. A TCP algorithm's main purpose is not to send more data than the network can transmit, which is to prevent a network congestion. While different algorithms do not respond to network loads, they all rely on the same principle to avoid congestion in the network.
 
 Things to heed for in TCP algorithms include :
+
 – Download/Upload speeds – The higher the rate, the better
+
 – Latency – The lower the number, the better
+
 
 By default, Linux uses the Reno and CUBIC congestion control algorithm but others can be added and used acordig with specific scenarios. This script allows the system administrators to change between congestion controls as fallow:
 
