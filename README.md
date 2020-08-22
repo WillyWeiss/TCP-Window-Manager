@@ -1,4 +1,4 @@
-# TCP Congestion Control
+# TCP-Window-Manager
 **ONLY FOR Linux Kernel 4.9 or ABOVE**
 
 **PLEASE USE THIS ONLY IF YOU KNOW WHAT ARE YOU DOING. ELSE PLEASE BE AWARE THAT THIS SCRIPT MAY PHYSICALLY DAMAGE YOUR MACHINE IS USED INCORRECTLY**
@@ -40,11 +40,11 @@ Binary Increase Congestion control (BIC):                                       
 # How to use
 Use git to clone this repository:
 ```sh
-git clone https://github.com/WillyWeiss/tcp_congestion_control.git && cd tcp_congestion_control/ && sudo chmod +x TCP-Congestion-ControlPanel
+git clone https://github.com/WillyWeiss/TCP-Window-Manager.git && cd TCP-Window-Manager/ && sudo chmod +x TCP-Window-Manager.sh
 ```
 Start the script by simply runing the script and you will input the root password when asked. 
 
 ```sh
-./TCP-Congestion-ControlPanel
+./TCP-Window-Manager.sh
 ```
 
