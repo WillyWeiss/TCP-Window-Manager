@@ -2,7 +2,7 @@
 
 #!/bin/bash
 
-
+## BBR Algorithm Method
 bbr(){
 clear
   printf "BBR stands for Bottleneck Bandwidth and RTT.\nTCP BBR is a TCP congestion control algorithm developed by Google. \nIt tackles shortcomings of traditional TCP congestion control algorithms (Reno or CUBIC).\nIt can achieve orders of magnitude higher bandwidth and lower latency. \n\n"
@@ -29,6 +29,7 @@ else
     MainMenu
 fi
 }
+## CUBIC Algorithm Method
 Cubic(){
 clear
   printf "One of the best, most recommended TCP options available. Less aggressive, works according to the event. Used in Linux.\n\n"
@@ -52,6 +53,7 @@ else
     MainMenu
 fi
 }
+## RENO Algorithm Method
 Reno(){
 clear
   printf "Limits unknown packets being receive but if 3 of the same packets are received, it will halve the window, instead of reducing it to one.\n It changes the slow start threshold equal to that of the congestion window.\n\n"
@@ -75,6 +77,7 @@ else
     MainMenu
 fi
 }
+## VEGAS Algorithm Method
 Vegas(){
 clear
   printf "One of the smoothest TCP algorithms(next to cubic), it increases the timeout delay for packets, which allows more to be received, but at a higher rate.\n It also has set timeouts, which helps with speed because it’s constantly being refreshed.\n\n"
@@ -98,6 +101,8 @@ else
     MainMenu
 fi
 }
+
+## HYBLA Algorithm Method
 Hybla(){
 clear
   echo "Penalizes connections that use satellite radio. Not usually used with phones.\n\n"
@@ -121,6 +126,7 @@ else
     MainMenu
 fi
 }
+## Westwood Algorithm Method
 Westwood(){
 clear
    printf "A newer version of Reno, and another commonly used one. \nIt controls parameters better, helping out streaming and overall quality of browsing the internet.\n One of the most fair algorithms out there, and is one of the most efficient algorithms to date.\n\n"
@@ -144,6 +150,7 @@ else
     MainMenu
 fi
 }
+## LowPriority Algorithm Method
 LowPriority(){
 clear
    printf "A distributed algorithm whose goal is to utilize only the excess network bandwidth as compared to the “fair share” of bandwidth as targeted by TCP.\n The key mechanisms unique to TCP-LP congestion control are the use of one-way packet delays for early congestion indications and a TCP-transparent congestion avoidance policy.\n\n"
@@ -165,6 +172,7 @@ else
     MainMenu
 fi
 }
+## BIC Algorithm Method
 BIC(){
 clear
     printf "BIC is optimized for high speed networks with high latency: so-called “long fat networks”.\n It has a unique congestion window (cwnd) algorithm.\n This algorithm tries to find the maximum where to keep the window at for a long period of time, by using a binary search algorithm.\n\n"
@@ -185,6 +193,8 @@ else
     MainMenu
 fi
 }
+
+## Main Menu Method
 MainMenu(){
 clear
 active_congestion=$(sysctl net.ipv4.tcp_congestion_control | grep -o =.*
@@ -230,4 +240,6 @@ do
 
 done
 }
+## Start the program
 MainMenu
+## End of File
